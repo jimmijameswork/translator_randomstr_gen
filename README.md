@@ -102,8 +102,3 @@ npm run dev
 - Ensure you are subscribed to the chosen RapidAPI translator API.
 - Some APIs may block **frontend-only requests**. If you face CORS or 401/403 issues, set up a **Node.js/Express proxy**.
 - Keep your **RapidAPI key** safe and never commit it to GitHub.
-
----
-
-## 📜 License
-This project is licensed under the MIT License.
