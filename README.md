@@ -1,16 +1,109 @@
-# React + Vite
+# Text Translator & Random String Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application built with **React**, **TailwindCSS**, and **React Router** that provides two main features:
 
-Currently, two official plugins are available:
+1. **Text Translator** – Enter text in English and translate it into your favorite language using **RapidAPI**.  
+2. **Random String Generator** – Generate random alphanumeric strings using React hooks (`useState`, `useCallback`, `useEffect`).  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Features
+- Translate English text into multiple languages (Spanish, French, Hindi, Chinese, etc.).
+- Generate random strings instantly.
+- Responsive UI with **TailwindCSS**.
+- **Client-side routing** using `react-router-dom`.
+- Clean component-based structure.
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
+- **React 18+**
+- **Tailwind CSS**
+- **React Router DOM**
+- **Axios**
+- **RapidAPI Translation API**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📂 Project Structure
+```
+src/
+├─ components/
+│  ├─ Navbar.jsx
+│  ├─ Translator.jsx
+│  ├─ RandomString.jsx
+├─ pages/
+│  ├─ Home.jsx
+│  ├─ TranslatePage.jsx
+│  ├─ RandomStringPage.jsx
+├─ App.jsx
+├─ index.js
+```
+
+---
+
+## ⚙️ Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/text-translator-app.git
+   cd text-translator-app
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Install Tailwind CSS:
+   ```bash
+   npm install -D tailwindcss postcss autoprefixer
+   npx tailwindcss init -p
+   ```
+
+   Add the following to **tailwind.config.js**:
+   ```js
+   module.exports = {
+     content: ["./src/**/*.{js,jsx,ts,tsx}"],
+     theme: { extend: {} },
+     plugins: [],
+   };
+   ```
+
+4. Set up environment variables:  
+   Create a `.env` file in the root directory:
+   ```
+   VITE_RAPIDAPI_KEY=your_api_key_here
+   ```
+
+---
+
+## ▶️ Usage
+
+### Start Development Server
+```bash
+npm run dev
+```
+
+### Translator
+- Navigate to **/translate**.
+- Enter text in English.
+- Choose a target language.
+- Click **Translate** → The translated text will appear.
+
+### Random String Generator
+- Navigate to **/random**.
+- View an auto-generated string.
+- Click **Generate New String** to refresh.
+
+---
+
+## 📌 Notes
+- Ensure you are subscribed to the chosen RapidAPI translator API.
+- Some APIs may block **frontend-only requests**. If you face CORS or 401/403 issues, set up a **Node.js/Express proxy**.
+- Keep your **RapidAPI key** safe and never commit it to GitHub.
+
+---
+
+## 📜 License
+This project is licensed under the MIT License.
